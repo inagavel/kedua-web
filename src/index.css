@@ -45,11 +45,11 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Custom educational colors */
-    --education-blue: 210 100% 56%;
-    --education-green: 142 69% 58%;
-    --education-light-blue: 200 100% 96%;
-    --education-light-green: 142 69% 96%;
+    /* Modern color scheme - Purple to Pink */
+    --education-blue: 270 91% 65%;
+    --education-green: 320 85% 70%;
+    --education-light-blue: 270 100% 98%;
+    --education-light-green: 320 100% 98%;
   }
 
   .dark {
