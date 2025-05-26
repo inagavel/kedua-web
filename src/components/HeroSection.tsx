@@ -1,4 +1,3 @@
-
 import { Search, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,16 +5,11 @@ import { Input } from "@/components/ui/input";
 const HeroSection = () => {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6000&q=80')`
-        }}
-      />
+      {/* Beautiful gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-education-light-blue via-white to-education-light-green" />
       
-      {/* Overlay with lighter gradient for better visibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/75 via-education-light-blue/65 to-education-light-green/65" />
+      {/* Additional gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-r from-education-blue/10 via-transparent to-education-green/10" />
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
