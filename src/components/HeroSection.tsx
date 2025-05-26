@@ -5,21 +5,33 @@ import { Input } from "@/components/ui/input";
 
 const HeroSection = () => {
   return (
-    <section className="hero-gradient py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 md:py-24 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6000&q=80')`
+        }}
+      />
+      
+      {/* Overlay with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-education-light-blue/90 to-education-light-green/90" />
+      
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 animate-fade-in">
             Sua jornada educacional
             <span className="block text-education-blue">começa aqui</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in">
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fade-in font-medium">
             Encontre e se matricule nas melhores instituições de ensino do Brasil. 
             Conectamos estudantes a oportunidades educacionais excepcionais.
           </p>
 
           {/* Search Bar */}
-          <div className="bg-white rounded-xl shadow-lg p-4 mb-8 max-w-2xl mx-auto animate-scale-in">
+          <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 mb-8 max-w-2xl mx-auto animate-scale-in border border-white/20">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -43,17 +55,17 @@ const HeroSection = () => {
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center animate-fade-in">
+            <div className="text-center animate-fade-in bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20">
               <div className="text-3xl font-bold text-education-blue mb-2">2,500+</div>
-              <div className="text-gray-600">Instituições Parceiras</div>
+              <div className="text-gray-700 font-medium">Instituições Parceiras</div>
             </div>
-            <div className="text-center animate-fade-in">
+            <div className="text-center animate-fade-in bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20">
               <div className="text-3xl font-bold text-education-green mb-2">150k+</div>
-              <div className="text-gray-600">Estudantes Ativos</div>
+              <div className="text-gray-700 font-medium">Estudantes Ativos</div>
             </div>
-            <div className="text-center animate-fade-in">
+            <div className="text-center animate-fade-in bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20">
               <div className="text-3xl font-bold text-education-blue mb-2">98%</div>
-              <div className="text-gray-600">Taxa de Satisfação</div>
+              <div className="text-gray-700 font-medium">Taxa de Satisfação</div>
             </div>
           </div>
         </div>
