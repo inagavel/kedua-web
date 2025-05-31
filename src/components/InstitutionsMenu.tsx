@@ -101,15 +101,15 @@ const InstitutionsMenu = () => {
   });
 
   return (
-    <section className="py-16 bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="gradient-bg text-white py-20 px-8 rounded-3xl mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+    <section className="bg-gray-50 min-h-screen">
+      <div className="w-full">
+        {/* Hero Section - sem margens nem border radius */}
+        <div className="gradient-bg text-white py-20 px-8">
+          <div className="container mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
               Encontre as Melhores Instituições de Ensino
             </h1>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 opacity-90 text-center">
               Compare, analise e escolha entre milhares de instituições em todo o Brasil.
             </p>
             
@@ -132,99 +132,107 @@ const InstitutionsMenu = () => {
           </div>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start">
-          {filterTabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveFilter(tab.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                activeFilter === tab.id
-                  ? "bg-blue-600 text-white shadow-lg"
-                  : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-          
-          {/* Additional Options */}
-          <div className="flex gap-2 ml-auto">
-            <Button variant="outline" className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              Localização
-            </Button>
-            <Button variant="outline" className="flex items-center gap-2">
-              <Star className="w-4 h-4" />
-              Avaliação
-            </Button>
+        <div className="container mx-auto px-4 py-8">
+          {/* Filter Tabs */}
+          <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start">
+            {filterTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveFilter(tab.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                  activeFilter === tab.id
+                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
+                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+            
+            {/* Additional Options */}
+            <div className="flex gap-2 ml-auto">
+              <Button 
+                variant="outline" 
+                className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white border-0 hover:opacity-90"
+              >
+                <MapPin className="w-4 h-4" />
+                Localização
+              </Button>
+              <Button 
+                variant="outline" 
+                className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 hover:opacity-90"
+              >
+                <Star className="w-4 h-4" />
+                Avaliação
+              </Button>
+            </div>
           </div>
-        </div>
 
-        {/* Institutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredInstitutions.map((institution) => (
-            <Card key={institution.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white border-0">
-              <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={institution.image} 
-                  alt={institution.name}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-3 right-3">
-                  <div className="bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-sm font-medium">
-                    <Star className="w-3 h-3 fill-current" />
-                    {institution.rating}
+          {/* Institutions Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredInstitutions.map((institution) => (
+              <Card key={institution.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white border-0">
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={institution.image} 
+                    alt={institution.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <div className="bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-sm font-medium">
+                      <Star className="w-3 h-3 fill-current" />
+                      {institution.rating}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-black/60 text-white px-2 py-1 rounded text-sm">
+                    <MapPin className="w-3 h-3" />
+                    {institution.location}
                   </div>
                 </div>
-                <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-black/60 text-white px-2 py-1 rounded text-sm">
-                  <MapPin className="w-3 h-3" />
-                  {institution.location}
-                </div>
-              </div>
-              
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 cursor-pointer">
-                  {institution.name}
-                </h3>
                 
-                <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    <span>{institution.students} alunos</span>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-blue-600 mb-3 hover:text-blue-700 cursor-pointer">
+                    {institution.name}
+                  </h3>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      <span>{institution.students} alunos</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>Desde {institution.foundedYear}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>Desde {institution.foundedYear}</span>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {institution.courses.map((course, index) => (
+                      <Badge key={index} variant="secondary" className="text-blue-600 bg-blue-50">
+                        {course}
+                      </Badge>
+                    ))}
+                    {institution.moreCoursesCount > 0 && (
+                      <Badge variant="secondary" className="text-gray-600 bg-gray-100">
+                        +{institution.moreCoursesCount}
+                      </Badge>
+                    )}
                   </div>
-                </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {institution.courses.map((course, index) => (
-                    <Badge key={index} variant="secondary" className="text-blue-600 bg-blue-50">
-                      {course}
-                    </Badge>
-                  ))}
-                  {institution.moreCoursesCount > 0 && (
-                    <Badge variant="secondary" className="text-gray-600 bg-gray-100">
-                      +{institution.moreCoursesCount}
-                    </Badge>
-                  )}
-                </div>
-
-                <Button className="w-full gradient-bg border-0 text-white hover:opacity-90">
-                  Ver Detalhes
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {filteredInstitutions.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">Nenhuma instituição encontrada com os filtros selecionados.</p>
+                  <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 border-0 text-white hover:opacity-90">
+                    Ver Detalhes
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        )}
+
+          {filteredInstitutions.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">Nenhuma instituição encontrada com os filtros selecionados.</p>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
