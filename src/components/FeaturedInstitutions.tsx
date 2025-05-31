@@ -53,8 +53,11 @@ const institutions = [
 
 const FeaturedInstitutions = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
+    <section className="py-16 relative overflow-hidden">
+      {/* Apply hero gradient background */}
+      <div className="absolute inset-0 hero-gradient" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Instituições em Destaque
@@ -68,7 +71,7 @@ const FeaturedInstitutions = () => {
           {institutions.map((institution, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 overflow-hidden hover:-translate-y-2"
+              className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 overflow-hidden hover:-translate-y-2 bg-white/95 backdrop-blur-sm"
             >
               <div className="aspect-video overflow-hidden relative">
                 <img 

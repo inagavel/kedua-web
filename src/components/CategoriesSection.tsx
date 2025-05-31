@@ -43,8 +43,11 @@ const categories = [
 
 const CategoriesSection = () => {
   return (
-    <section id="categorias" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="categorias" className="py-20 relative overflow-hidden">
+      {/* Apply hero gradient background */}
+      <div className="absolute inset-0 hero-gradient" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Categorias de Ensino
@@ -58,7 +61,7 @@ const CategoriesSection = () => {
           {categories.map((category, index) => (
             <Card 
               key={index} 
-              className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border-0 hover:-translate-y-3 bg-white backdrop-blur-sm"
+              className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border-0 hover:-translate-y-3 bg-white/95 backdrop-blur-sm"
             >
               {/* Background gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
