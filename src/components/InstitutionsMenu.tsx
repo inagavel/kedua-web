@@ -1,3 +1,4 @@
+
 import { Search, MapPin, Users, Calendar, Star } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -138,10 +139,10 @@ const InstitutionsMenu = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                className={`px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${
                   activeFilter === tab.id
-                    ? "bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-lg"
-                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
+                    ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-purple-500/50 shadow-xl"
+                    : "bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200 hover:border-purple-300"
                 }`}
               >
                 {tab.label}
@@ -149,19 +150,19 @@ const InstitutionsMenu = () => {
             ))}
             
             {/* Additional Options */}
-            <div className="flex gap-2 ml-auto">
+            <div className="flex gap-3 ml-auto">
               <Button 
                 variant="outline" 
-                className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-green-500 text-white border-0 hover:from-blue-600 hover:to-green-600"
+                className="flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 hover:from-orange-600 hover:to-red-600 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-5 h-5" />
                 Localização
               </Button>
               <Button 
                 variant="outline" 
-                className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white border-0 hover:from-green-600 hover:to-blue-600"
+                className="flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 hover:from-yellow-600 hover:to-orange-600 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
-                <Star className="w-4 h-4" />
+                <Star className="w-5 h-5" />
                 Avaliação
               </Button>
             </div>

@@ -96,7 +96,7 @@ const Categories = () => {
                     {category.count}
                   </p>
                   
-                  <Button className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white border-0">
+                  <Button className="w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                     Explorar Categoria
                   </Button>
                 </CardContent>
