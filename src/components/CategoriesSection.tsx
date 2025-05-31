@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 const categories = [
   {
     icon: BookOpen,
-    title: "Ensino Fundamental",
-    description: "Base sólida para o futuro acadêmico",
+    title: "Ensino Básico",
+    description: "Base sólida para o futuro académico",
     institutions: "1.200+ escolas",
     color: "bg-blue-500",
     iconBg: "bg-blue-100 text-blue-600",
@@ -14,7 +14,7 @@ const categories = [
   },
   {
     icon: GraduationCap,
-    title: "Ensino Médio",
+    title: "Ensino Secundário",
     description: "Preparação para o ensino superior",
     institutions: "800+ escolas",
     color: "bg-green-500",
@@ -24,7 +24,7 @@ const categories = [
   {
     icon: Building,
     title: "Ensino Superior",
-    description: "Graduação e pós-graduação",
+    description: "Licenciatura e pós-graduação",
     institutions: "350+ universidades",
     color: "bg-blue-600",
     iconBg: "bg-blue-100 text-blue-600",
@@ -32,7 +32,7 @@ const categories = [
   },
   {
     icon: Wrench,
-    title: "Ensino Técnico",
+    title: "Ensino Profissional",
     description: "Formação profissional especializada",
     institutions: "450+ institutos",
     color: "bg-teal-500",
@@ -53,7 +53,7 @@ const CategoriesSection = () => {
             Categorias de Ensino
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Encontre a modalidade de ensino ideal para seu perfil e objetivos
+            Encontre a modalidade de ensino ideal para o seu perfil e objetivos
           </p>
         </div>
 

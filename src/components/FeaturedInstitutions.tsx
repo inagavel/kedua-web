@@ -6,47 +6,47 @@ import { Button } from "@/components/ui/button";
 
 const institutions = [
   {
-    name: "Universidade Federal de São Paulo",
+    name: "Universidade do Porto",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
     rating: 4.8,
-    location: "São Paulo, SP",
-    students: "45.000",
+    location: "Porto",
+    students: "32.000",
     courses: "120 cursos",
     categories: ["Universidade Pública"],
-    description: "Excelência em ensino superior e pesquisa científica",
+    description: "Excelência em ensino superior e investigação científica",
     highlight: "Destaque"
   },
   {
-    name: "Instituto Tecnológico de Aeronáutica",
+    name: "Instituto Superior Técnico",
     image: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=400&h=300&fit=crop",
     rating: 4.9,
-    location: "São José dos Campos, SP",
-    students: "5.000",
+    location: "Lisboa",
+    students: "12.000",
     courses: "25 cursos",
-    categories: ["Instituto Federal"],
+    categories: ["Instituto Superior"],
     description: "Formação de engenheiros de excelência",
     highlight: "Destaque"
   },
   {
-    name: "Colégio Objetivo",
+    name: "Colégio São João de Brito",
     image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400&h=300&fit=crop",
     rating: 4.7,
-    location: "Rio de Janeiro, RJ",
-    students: "12.000",
+    location: "Lisboa",
+    students: "1.500",
     courses: "8 cursos",
-    categories: ["Ensino Médio"],
-    description: "Preparação para vestibulares e ENEM",
+    categories: ["Ensino Secundário"],
+    description: "Preparação para o ensino superior",
     highlight: "Destaque"
   },
   {
-    name: "SENAI - Escola Técnica",
+    name: "Instituto Politécnico do Porto",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     rating: 4.6,
-    location: "Belo Horizonte, MG",
-    students: "8.000",
+    location: "Porto",
+    students: "18.000",
     courses: "35 cursos",
-    categories: ["Ensino Técnico"],
-    description: "Formação técnica de ponta para o mercado",
+    categories: ["Ensino Politécnico"],
+    description: "Formação técnica de excelência para o mercado",
     highlight: "Destaque"
   }
 ];

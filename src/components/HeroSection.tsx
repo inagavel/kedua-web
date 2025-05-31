@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 animate-fade-in">
-            Sua{" "}
+            A Sua{" "}
             <span className="bg-gradient-to-r from-education-blue to-education-green bg-clip-text text-transparent">
               Educação
             </span>{" "}
@@ -21,8 +21,8 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fade-in font-medium">
-            Encontre e se matricule nas melhores instituições de ensino do Brasil. 
-            Mais de 500 escolas parceiras esperando por você.
+            Encontre e inscreva-se nas melhores instituições de ensino de Portugal. 
+            Mais de 500 escolas parceiras à sua espera.
           </p>
 
           {/* Search Bar */}
@@ -31,19 +31,19 @@ const HeroSection = () => {
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <Input 
-                  placeholder="Buscar por curso ou instituição..." 
+                  placeholder="Procurar por curso ou instituição..." 
                   className="pl-10 h-12 border-0 bg-gray-50 focus:bg-white"
                 />
               </div>
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <Input 
-                  placeholder="Cidade ou estado..." 
+                  placeholder="Cidade ou distrito..." 
                   className="pl-10 h-12 border-0 bg-gray-50 focus:bg-white md:w-48"
                 />
               </div>
               <Button className="h-12 px-8 gradient-bg border-0 text-white hover:opacity-90">
-                Buscar
+                Procurar
               </Button>
             </div>
           </div>
@@ -56,7 +56,7 @@ const HeroSection = () => {
             </div>
             <div className="text-center animate-fade-in bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/30">
               <div className="text-3xl font-bold text-education-green mb-2">50.000+</div>
-              <div className="text-gray-700 font-medium text-sm">Alunos Matriculados</div>
+              <div className="text-gray-700 font-medium text-sm">Alunos Inscritos</div>
             </div>
             <div className="text-center animate-fade-in bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/30">
               <div className="text-3xl font-bold text-education-blue mb-2">1.200+</div>

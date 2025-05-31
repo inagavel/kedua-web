@@ -11,30 +11,30 @@ const contactInfo = [
   {
     icon: Mail,
     title: "E-mail",
-    description: "Envie sua mensagem para",
-    contact: "contato@kedua.com.br",
-    action: "mailto:contato@kedua.com.br"
+    description: "Envie a sua mensagem para",
+    contact: "contacto@kedua.pt",
+    action: "mailto:contacto@kedua.pt"
   },
   {
     icon: Phone,
     title: "Telefone",
-    description: "Ligue para nosso atendimento",
-    contact: "(11) 3000-0000",
-    action: "tel:+551130000000"
+    description: "Ligue para o nosso atendimento",
+    contact: "(+351) 21 000 0000",
+    action: "tel:+351210000000"
   },
   {
     icon: MapPin,
-    title: "Endereço",
-    description: "Visite nosso escritório",
-    contact: "São Paulo, SP - Brasil",
+    title: "Morada",
+    description: "Visite o nosso escritório",
+    contact: "Lisboa, Portugal",
     action: "#"
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    description: "Converse conosco no",
-    contact: "(11) 99999-9999",
-    action: "https://wa.me/5511999999999"
+    description: "Converse connosco no",
+    contact: "(+351) 91 000 0000",
+    action: "https://wa.me/351910000000"
   }
 ];
 
@@ -47,11 +47,11 @@ const Contact = () => {
       <section className="gradient-bg text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Entre em Contato
+            Entre em Contacto
           </h1>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Estamos aqui para ajudar você a encontrar a melhor instituição educacional. 
-            Entre em contato conosco!
+            Estamos aqui para o ajudar a encontrar a melhor instituição educacional. 
+            Entre em contacto connosco!
           </p>
         </div>
       </section>
@@ -89,10 +89,10 @@ const Contact = () => {
               <CardContent className="p-8">
                 <div className="text-center mb-8">
                   <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    Envie sua Mensagem
+                    Envie a Sua Mensagem
                   </h2>
                   <p className="text-gray-600">
-                    Preencha o formulário abaixo e entraremos em contato em breve.
+                    Preencha o formulário abaixo e entraremos em contacto em breve.
                   </p>
                 </div>
 
@@ -100,7 +100,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Nome Completo</Label>
-                      <Input id="name" placeholder="Seu nome completo" />
+                      <Input id="name" placeholder="O seu nome completo" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">E-mail</Label>
@@ -111,7 +111,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Telefone</Label>
-                      <Input id="phone" placeholder="(11) 99999-9999" />
+                      <Input id="phone" placeholder="(+351) 91 000 0000" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="subject">Assunto</Label>
@@ -124,7 +124,7 @@ const Contact = () => {
                     <textarea
                       id="message"
                       rows={6}
-                      placeholder="Escreva sua mensagem aqui..."
+                      placeholder="Escreva a sua mensagem aqui..."
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     />
                   </div>

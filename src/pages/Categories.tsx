@@ -17,14 +17,14 @@ const categories = [
   {
     id: 2,
     name: "Escolas Técnicas",
-    description: "Formação técnica e profissionalizante",
+    description: "Formação técnica e profissional",
     icon: Laptop,
     count: "80+ instituições",
     color: "from-green-500 to-green-600"
   },
   {
     id: 3,
-    name: "Ensino Médio",
+    name: "Ensino Secundário",
     description: "Educação básica e preparatório",
     icon: BookOpen,
     count: "200+ instituições",
@@ -68,7 +68,7 @@ const Categories = () => {
             Categorias de Ensino
           </h1>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Explore diferentes tipos de instituições educacionais e encontre a categoria perfeita para seus objetivos.
+            Explore diferentes tipos de instituições educacionais e encontre a categoria perfeita para os seus objetivos.
           </p>
         </div>
       </section>

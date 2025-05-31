@@ -6,24 +6,24 @@ const testimonials = [
   {
     name: "Maria Silva",
     role: "Estudante de Medicina",
-    institution: "UNIFESP",
-    content: "O Kedua foi fundamental para encontrar minha universidade dos sonhos. O processo foi muito simples e transparente.",
+    institution: "Universidade do Porto",
+    content: "A Kedua foi fundamental para encontrar a minha universidade de sonho. O processo foi muito simples e transparente.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face"
   },
   {
     name: "João Santos",
     role: "Técnico em Informática",
-    institution: "SENAI",
-    content: "Consegui me matricular no curso técnico perfeito para minha carreira. A plataforma é intuitiva e confiável.",
+    institution: "Instituto Politécnico de Lisboa",
+    content: "Consegui inscrever-me no curso técnico perfeito para a minha carreira. A plataforma é intuitiva e fiável.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=100&h=100&fit=crop&crop=face"
   },
   {
     name: "Ana Costa",
-    role: "Ensino Médio",
+    role: "Ensino Secundário",
     institution: "Colégio São Vicente",
-    content: "Meus pais ficaram muito satisfeitos com a facilidade do processo de matrícula através do Kedua.",
+    content: "Os meus pais ficaram muito satisfeitos com a facilidade do processo de inscrição através da Kedua.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=100&h=100&fit=crop&crop=face"
   }
@@ -35,10 +35,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            O que nossos estudantes dizem
+            O que os nossos estudantes dizem
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Depoimentos reais de estudantes que encontraram sua instituição ideal através do Kedua
+            Depoimentos reais de estudantes que encontraram a sua instituição ideal através da Kedua
           </p>
         </div>
 

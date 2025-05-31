@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Users, Award, Heart } from "lucide-react";
@@ -6,23 +7,23 @@ import { Card, CardContent } from "@/components/ui/card";
 const values = [
   {
     icon: Target,
-    title: "Nossa Missão",
-    description: "Democratizar o acesso à educação de qualidade, conectando estudantes às melhores instituições de ensino do Brasil."
+    title: "A Nossa Missão",
+    description: "Democratizar o acesso à educação de qualidade, conectando estudantes às melhores instituições de ensino de Portugal."
   },
   {
     icon: Users,
-    title: "Nossa Visão", 
-    description: "Ser a principal plataforma de descoberta educacional, transformando a forma como pessoas encontram oportunidades de aprendizado."
+    title: "A Nossa Visão", 
+    description: "Ser a principal plataforma de descoberta educacional, transformando a forma como as pessoas encontram oportunidades de aprendizagem."
   },
   {
     icon: Award,
     title: "Excelência",
-    description: "Comprometimento com a qualidade e transparência na avaliação e apresentação das instituições parceiras."
+    description: "Compromisso com a qualidade e transparência na avaliação e apresentação das instituições parceiras."
   },
   {
     icon: Heart,
     title: "Impacto Social",
-    description: "Acreditamos que a educação é um direito fundamental e trabalhamos para torná-la mais acessível a todos."
+    description: "Acreditamos que a educação é um direito fundamental e trabalhamos para a tornar mais acessível a todos."
   }
 ];
 
@@ -38,7 +39,7 @@ const About = () => {
             Sobre a Kedua
           </h1>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Somos uma plataforma dedicada a conectar estudantes com as melhores oportunidades educacionais do Brasil.
+            Somos uma plataforma dedicada a conectar estudantes com as melhores oportunidades educacionais de Portugal.
           </p>
         </div>
       </section>
@@ -49,12 +50,12 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Nossa História
+                A Nossa História
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                A Kedua nasceu da necessidade de simplificar a busca por instituições educacionais no Brasil. 
-                Percebemos que muitos estudantes enfrentavam dificuldades para encontrar informações confiáveis 
-                e comparar diferentes opções de ensino. Assim, criamos uma plataforma que centraliza essas 
+                A Kedua nasceu da necessidade de simplificar a procura por instituições educacionais em Portugal. 
+                Percebemos que muitos estudantes enfrentavam dificuldades para encontrar informações fiáveis 
+                e comparar diferentes opções de ensino. Assim, criámos uma plataforma que centraliza essas 
                 informações de forma clara e acessível.
               </p>
             </div>
@@ -62,16 +63,16 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  O que nos move
+                  O que nos motiva
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Acreditamos que a educação é o pilar fundamental para o desenvolvimento pessoal e social. 
-                  Nossa missão é tornar mais fácil para cada pessoa encontrar a instituição que melhor 
+                  A nossa missão é tornar mais fácil para cada pessoa encontrar a instituição que melhor 
                   se adapta aos seus objetivos, sonhos e necessidades.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Com uma equipe apaixonada por educação e tecnologia, trabalhamos constantemente para 
-                  melhorar nossa plataforma e oferecer a melhor experiência possível aos nossos usuários.
+                  Com uma equipa apaixonada por educação e tecnologia, trabalhamos constantemente para 
+                  melhorar a nossa plataforma e oferecer a melhor experiência possível aos nossos utilizadores.
                 </p>
               </div>
               <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg">
@@ -100,10 +101,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Nossos Valores
+              Os Nossos Valores
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Os princípios que guiam nosso trabalho e nossa relação com estudantes e instituições.
+              Os princípios que guiam o nosso trabalho e a nossa relação com estudantes e instituições.
             </p>
           </div>
 

@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { UserPlus, Search, GraduationCap, BarChart3, TrendingUp, CheckCircle, Shield, Users, FileText, BookOpen } from "lucide-react";
@@ -8,43 +9,43 @@ const steps = [
   {
     id: 1,
     icon: UserPlus,
-    title: "Crie sua conta",
-    description: "Registre-se gratuitamente em nossa plataforma para ter acesso a todas as funcionalidades.",
+    title: "Crie a sua conta",
+    description: "Registe-se gratuitamente na nossa plataforma para ter acesso a todas as funcionalidades.",
     color: "from-blue-500 to-blue-600"
   },
   {
     id: 2,
     icon: Search,
     title: "Explore instituições",
-    description: "Pesquise e compare milhares de instituições de ensino em todo o Brasil.",
+    description: "Pesquise e compare milhares de instituições de ensino em todo o Portugal.",
     color: "from-green-500 to-green-600"
   },
   {
     id: 3,
     icon: GraduationCap,
     title: "Descubra cursos",
-    description: "Filtre e compare cursos de acordo com suas preferências e objetivos.",
+    description: "Filtre e compare cursos de acordo com as suas preferências e objetivos.",
     color: "from-blue-500 to-blue-600"
   },
   {
     id: 4,
     icon: FileText,
     title: "Compare detalhes",
-    description: "Analise grade curricular, corpo docente, valores e avaliações de outros alunos.",
+    description: "Analise o plano curricular, corpo docente, valores e avaliações de outros alunos.",
     color: "from-green-500 to-green-600"
   },
   {
     id: 5,
     icon: TrendingUp,
-    title: "Faça sua escolha",
+    title: "Faça a sua escolha",
     description: "Decida com base em dados concretos e informações detalhadas.",
     color: "from-blue-500 to-blue-600"
   },
   {
     id: 6,
     icon: CheckCircle,
-    title: "Matricule-se",
-    description: "Realize sua matrícula diretamente pela nossa plataforma de forma simples e segura.",
+    title: "Inscreva-se",
+    description: "Realize a sua inscrição diretamente pela nossa plataforma de forma simples e segura.",
     color: "from-green-500 to-green-600"
   }
 ];
@@ -65,7 +66,7 @@ const benefits = [
   {
     icon: BarChart3,
     title: "Comparação Detalhada",
-    description: "Ferramentas avançadas para comparar instituições e cursos lado a lado, facilitando sua decisão.",
+    description: "Ferramentas avançadas para comparar instituições e cursos lado a lado, facilitando a sua decisão.",
     color: "from-blue-500 to-blue-600"
   },
   {
@@ -83,19 +84,19 @@ const faqs = [
   },
   {
     question: "Como são verificadas as informações das instituições?",
-    answer: "Nossa equipe trabalha diretamente com as instituições para garantir que todas as informações estejam atualizadas. Além disso, realizamos verificações periódicas e utilizamos feedback dos usuários para manter a precisão."
+    answer: "A nossa equipa trabalha diretamente com as instituições para garantir que todas as informações estejam atualizadas. Além disso, realizamos verificações periódicas e utilizamos feedback dos utilizadores para manter a precisão."
   },
   {
-    question: "Posso fazer minha matrícula direto pela plataforma?",
-    answer: "Sim! Para a maioria das instituições parceiras, oferecemos o processo completo de matrícula diretamente pela nossa plataforma, de forma segura e prática."
+    question: "Posso fazer a minha inscrição diretamente pela plataforma?",
+    answer: "Sim! Para a maioria das instituições parceiras, oferecemos o processo completo de inscrição diretamente pela nossa plataforma, de forma segura e prática."
   },
   {
     question: "Existe alguma garantia ou política de reembolso?",
-    answer: "Respeitamos as políticas de cada instituição, mas trabalhamos como mediadores para garantir que seus direitos sejam respeitados em caso de desistência ou problemas com o curso."
+    answer: "Respeitamos as políticas de cada instituição, mas trabalhamos como mediadores para garantir que os seus direitos sejam respeitados em caso de desistência ou problemas com o curso."
   },
   {
-    question: "Como faço para entrar em contato com o suporte?",
-    answer: "Você pode acessar nosso suporte através da página de Suporte, por e-mail em suporte@kedua.com.br ou pelo telefone 0800-123-4567, disponível de segunda a sexta, das 8h às 20h."
+    question: "Como faço para entrar em contacto com o suporte?",
+    answer: "Pode aceder ao nosso suporte através da página de Suporte, por e-mail em suporte@kedua.pt ou pelo telefone (+351) 21 000 0000, disponível de segunda a sexta, das 8h às 20h."
   }
 ];
 
@@ -111,7 +112,7 @@ const HowItWorks = () => {
             Como Funciona
           </h1>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Do cadastro à matrícula, a Kedua torna todo o processo simples e transparente, economizando seu tempo e garantindo a melhor escolha.
+            Do registo à inscrição, a Kedua torna todo o processo simples e transparente, poupando o seu tempo e garantindo a melhor escolha.
           </p>
         </div>
       </section>
@@ -125,7 +126,7 @@ const HowItWorks = () => {
               <span className="text-green-600">6 Passos</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Do cadastro à matrícula, a Kedua torna todo o processo simples e transparente, economizando seu tempo e garantindo a melhor escolha.
+              Do registo à inscrição, a Kedua torna todo o processo simples e transparente, poupando o seu tempo e garantindo a melhor escolha.
             </p>
           </div>
 
@@ -162,7 +163,7 @@ const HowItWorks = () => {
 
           <div className="text-center mt-12">
             <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
-              Iniciar Minha Busca
+              Iniciar a Minha Pesquisa
             </button>
           </div>
         </div>
@@ -173,11 +174,11 @@ const HowItWorks = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-blue-600">Por Que Escolher a </span>
+              <span className="text-blue-600">Porquê Escolher a </span>
               <span className="text-green-600">Kedua</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Nossa plataforma foi desenvolvida pensando em oferecer a melhor experiência possível para estudantes em busca de formação.
+              A nossa plataforma foi desenvolvida pensando em oferecer a melhor experiência possível para estudantes em busca de formação.
             </p>
           </div>
 
@@ -249,10 +250,10 @@ const HowItWorks = () => {
               Pronto para Começar?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Junte-se a milhares de estudantes que já encontraram sua instituição ideal através da Kedua.
+              Junte-se a milhares de estudantes que já encontraram a sua instituição ideal através da Kedua.
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
-              Buscar Instituições
+              Procurar Instituições
             </button>
           </div>
         </div>

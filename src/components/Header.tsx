@@ -28,7 +28,7 @@ const Header = () => {
             <Link to="/categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</Link>
             <Link to="/como-funciona" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Como Funciona</Link>
             <Link to="/sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</Link>
-            <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</Link>
+            <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contacto</Link>
           </nav>
 
           {/* Actions */}
@@ -50,7 +50,7 @@ const Header = () => {
                     <Input id="email" type="email" placeholder="seu@email.com" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="password" className="text-sm font-medium">Senha</label>
+                    <label htmlFor="password" className="text-sm font-medium">Palavra-passe</label>
                     <Input id="password" type="password" placeholder="••••••••" />
                   </div>
                   <Button className="w-full gradient-bg border-0 text-white hover:opacity-90">
@@ -58,7 +58,7 @@ const Header = () => {
                   </Button>
                   <div className="text-center">
                     <a href="#" className="text-sm text-education-blue hover:underline">
-                      Esqueceu sua senha?
+                      Esqueceu-se da palavra-passe?
                     </a>
                   </div>
                 </div>
@@ -69,28 +69,28 @@ const Header = () => {
             <Dialog>
               <DialogTrigger asChild>
                 <Button size="sm" className="gradient-bg border-0 text-white hover:opacity-90 font-medium">
-                  Cadastrar
+                  Registar
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle className="text-center text-xl">Criar sua conta</DialogTitle>
+                  <DialogTitle className="text-center text-xl">Criar a sua conta</DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4 py-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">Nome completo</label>
-                    <Input id="name" type="text" placeholder="Seu nome completo" />
+                    <Input id="name" type="text" placeholder="O seu nome completo" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="signup-email" className="text-sm font-medium">E-mail</label>
                     <Input id="signup-email" type="email" placeholder="seu@email.com" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="signup-password" className="text-sm font-medium">Senha</label>
+                    <label htmlFor="signup-password" className="text-sm font-medium">Palavra-passe</label>
                     <Input id="signup-password" type="password" placeholder="••••••••" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="confirm-password" className="text-sm font-medium">Confirmar senha</label>
+                    <label htmlFor="confirm-password" className="text-sm font-medium">Confirmar palavra-passe</label>
                     <Input id="confirm-password" type="password" placeholder="••••••••" />
                   </div>
                   <Button className="w-full gradient-bg border-0 text-white hover:opacity-90">
@@ -122,7 +122,7 @@ const Header = () => {
               <Link to="/categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Categorias</Link>
               <Link to="/como-funciona" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Como Funciona</Link>
               <Link to="/sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
-              <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Contato</Link>
+              <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Contacto</Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
                 <Dialog>
                   <DialogTrigger asChild>
@@ -140,7 +140,7 @@ const Header = () => {
                         <Input id="mobile-email" type="email" placeholder="seu@email.com" />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="mobile-password" className="text-sm font-medium">Senha</label>
+                        <label htmlFor="mobile-password" className="text-sm font-medium">Palavra-passe</label>
                         <Input id="mobile-password" type="password" placeholder="••••••••" />
                       </div>
                       <Button className="w-full gradient-bg border-0 text-white hover:opacity-90">
@@ -150,7 +150,7 @@ const Header = () => {
                   </DialogContent>
                 </Dialog>
                 <Button size="sm" className="gradient-bg border-0 text-white hover:opacity-90 justify-start">
-                  Cadastrar
+                  Registar
                 </Button>
               </div>
             </nav>
