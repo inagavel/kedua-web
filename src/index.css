@@ -45,11 +45,11 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Modern color scheme - Purple to Pink */
-    --education-blue: 270 91% 65%;
-    --education-green: 320 85% 70%;
-    --education-light-blue: 270 100% 98%;
-    --education-light-green: 320 100% 98%;
+    /* Modern blue-to-green gradient like MatriculaHub */
+    --education-blue: 214 89% 52%;
+    --education-green: 158 64% 52%;
+    --education-light-blue: 214 100% 97%;
+    --education-light-green: 158 100% 97%;
   }
 
   .dark {
@@ -100,5 +100,9 @@
   
   .hero-gradient {
     background: linear-gradient(135deg, hsl(var(--education-light-blue)) 0%, hsl(var(--education-light-green)) 100%);
+  }
+
+  .stats-gradient {
+    background: linear-gradient(135deg, hsl(var(--education-blue)) 0%, hsl(var(--education-green)) 100%);
   }
 }
