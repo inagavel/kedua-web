@@ -1,3 +1,4 @@
+
 import { Star, MapPin, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -76,7 +77,7 @@ const FeaturedInstitutions = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-3 left-3">
-                  <Badge className="bg-orange-500 text-white text-xs px-2 py-1">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-green-500 text-white text-xs px-2 py-1 border-0">
                     {institution.highlight}
                   </Badge>
                 </div>
@@ -110,7 +111,7 @@ const FeaturedInstitutions = () => {
                   <div>{institution.courses}</div>
                 </div>
 
-                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white text-sm">
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white text-sm border-0">
                   Ver Detalhes
                 </Button>
               </CardContent>
@@ -119,7 +120,7 @@ const FeaturedInstitutions = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" className="px-8 py-3 border-orange-600 text-orange-600 hover:bg-orange-50">
+          <Button variant="outline" className="px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white border-0 hover:from-green-600 hover:to-blue-600">
             Ver Todas as Instituições
           </Button>
         </div>
