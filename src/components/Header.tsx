@@ -26,6 +26,7 @@ const Header = () => {
             <Link to="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Início</Link>
             <Link to="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</Link>
             <Link to="/categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</Link>
+            <Link to="/como-funciona" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Como Funciona</Link>
             <Link to="/sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</Link>
             <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</Link>
           </nav>
@@ -119,6 +120,7 @@ const Header = () => {
               <Link to="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Início</Link>
               <Link to="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Instituições</Link>
               <Link to="/categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Categorias</Link>
+              <Link to="/como-funciona" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Como Funciona</Link>
               <Link to="/sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
               <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Contato</Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
