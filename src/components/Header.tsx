@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,20 +14,20 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">K</span>
             </div>
             <span className="text-2xl font-bold text-gray-800">Kedua</span>
-          </div>
+          </Link>
 
           {/* Navigation - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Início</a>
-            <a href="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</a>
-            <a href="#categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</a>
-            <a href="#sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</a>
-            <a href="#contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</a>
+            <Link to="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Início</Link>
+            <Link to="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</Link>
+            <Link to="/categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</Link>
+            <Link to="/sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</Link>
+            <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</Link>
           </nav>
 
           {/* Actions */}
@@ -115,11 +116,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Início</a>
-              <a href="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</a>
-              <a href="#categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</a>
-              <a href="#sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</a>
-              <a href="#contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</a>
+              <Link to="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Início</Link>
+              <Link to="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Instituições</Link>
+              <Link to="/categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Categorias</Link>
+              <Link to="/sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
+              <Link to="/contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Contato</Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
                 <Dialog>
                   <DialogTrigger asChild>
