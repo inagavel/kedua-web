@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { UserPlus, Search, GraduationCap, BarChart3, TrendingUp, CheckCircle, Shield, Users, FileText, BookOpen } from "lucide-react";
@@ -116,8 +117,8 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Steps Section */}
-      <section className="py-16 bg-white">
+      {/* Steps Section with hero gradient background */}
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

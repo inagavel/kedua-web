@@ -44,8 +44,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-16">
+      {/* Story Section with hero gradient background */}
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -75,7 +75,7 @@ const About = () => {
                   melhorar nossa plataforma e oferecer a melhor experiência possível aos nossos usuários.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-lg">
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
                   <div className="text-gray-600">Instituições Parceiras</div>
