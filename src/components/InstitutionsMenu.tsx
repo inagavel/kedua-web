@@ -1,4 +1,3 @@
-
 import { Search, MapPin, Users, Calendar, Star } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -124,7 +123,7 @@ const InstitutionsMenu = () => {
                   className="h-14 pl-6 pr-4 text-lg border-0 rounded-l-xl bg-white text-gray-800"
                 />
               </div>
-              <Button className="h-14 px-8 bg-blue-600 hover:bg-blue-700 border-0 rounded-r-xl">
+              <Button className="h-14 px-8 bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 border-0 rounded-r-xl">
                 <Search className="w-5 h-5 mr-2" />
                 Buscar
               </Button>
@@ -141,7 +140,7 @@ const InstitutionsMenu = () => {
                 onClick={() => setActiveFilter(tab.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all ${
                   activeFilter === tab.id
-                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
+                    ? "bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-lg"
                     : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
                 }`}
               >
@@ -153,14 +152,14 @@ const InstitutionsMenu = () => {
             <div className="flex gap-2 ml-auto">
               <Button 
                 variant="outline" 
-                className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white border-0 hover:opacity-90"
+                className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-green-500 text-white border-0 hover:from-blue-600 hover:to-green-600"
               >
                 <MapPin className="w-4 h-4" />
                 Localização
               </Button>
               <Button 
                 variant="outline" 
-                className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 hover:opacity-90"
+                className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white border-0 hover:from-green-600 hover:to-blue-600"
               >
                 <Star className="w-4 h-4" />
                 Avaliação
@@ -219,7 +218,7 @@ const InstitutionsMenu = () => {
                     )}
                   </div>
 
-                  <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 border-0 text-white hover:opacity-90">
+                  <Button className="w-full bg-gradient-to-r from-blue-500 to-green-500 border-0 text-white hover:from-blue-600 hover:to-green-600">
                     Ver Detalhes
                   </Button>
                 </CardContent>
