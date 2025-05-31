@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { UserPlus, Search, GraduationCap, BarChart3, TrendingUp, CheckCircle, Shield, Users, FileText, BookOpen } from "lucide-react";
@@ -132,31 +131,37 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {steps.map((step, index) => (
-              <Card key={step.id} className="relative text-left border-0 hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+              <Card key={step.id} className="group relative text-left border-0 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white overflow-hidden">
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                
+                <CardContent className="p-8 relative z-10">
                   <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center flex-shrink-0`}>
-                      <step.icon className="w-6 h-6 text-white" />
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${step.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                      <step.icon className="w-7 h-7 text-white" />
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="text-sm font-bold text-blue-600">Passo {step.id}</span>
+                      <div className="flex items-center space-x-2 mb-4">
+                        <span className="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Passo {step.id}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-3">
+                      <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                         {step.title}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                         {step.description}
                       </p>
                     </div>
                   </div>
                 </CardContent>
+
+                {/* Hover border effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg">
+            <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
               Iniciar Minha Busca
             </button>
           </div>
@@ -178,22 +183,28 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-0 shadow-sm hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8">
+              <Card key={index} className="group border-0 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white overflow-hidden">
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                
+                <CardContent className="p-8 relative z-10">
                   <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${benefit.color} flex items-center justify-center flex-shrink-0`}>
-                      <benefit.icon className="w-6 h-6 text-white" />
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${benefit.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                      <benefit.icon className="w-7 h-7 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-blue-600 mb-3">
+                      <h3 className="text-xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">
                         {benefit.title}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                         {benefit.description}
                       </p>
                     </div>
                   </div>
                 </CardContent>
+
+                {/* Hover border effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
               </Card>
             ))}
           </div>
@@ -240,7 +251,7 @@ const HowItWorks = () => {
             <p className="text-xl text-gray-600 mb-8">
               Junte-se a milhares de estudantes que já encontraram sua instituição ideal através da Kedua.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg">
+            <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
               Buscar Instituições
             </button>
           </div>

@@ -9,7 +9,8 @@ const categories = [
     description: "Base sólida para o futuro acadêmico",
     institutions: "1.200+ escolas",
     color: "bg-blue-500",
-    iconBg: "bg-blue-100 text-blue-600"
+    iconBg: "bg-blue-100 text-blue-600",
+    gradient: "from-blue-500/10 to-blue-600/5"
   },
   {
     icon: GraduationCap,
@@ -17,7 +18,8 @@ const categories = [
     description: "Preparação para o ensino superior",
     institutions: "800+ escolas",
     color: "bg-green-500",
-    iconBg: "bg-green-100 text-green-600"
+    iconBg: "bg-green-100 text-green-600",
+    gradient: "from-green-500/10 to-green-600/5"
   },
   {
     icon: Building,
@@ -25,7 +27,8 @@ const categories = [
     description: "Graduação e pós-graduação",
     institutions: "350+ universidades",
     color: "bg-blue-600",
-    iconBg: "bg-blue-100 text-blue-600"
+    iconBg: "bg-blue-100 text-blue-600",
+    gradient: "from-blue-600/10 to-blue-700/5"
   },
   {
     icon: Wrench,
@@ -33,7 +36,8 @@ const categories = [
     description: "Formação profissional especializada",
     institutions: "450+ institutos",
     color: "bg-teal-500",
-    iconBg: "bg-teal-100 text-teal-600"
+    iconBg: "bg-teal-100 text-teal-600",
+    gradient: "from-teal-500/10 to-teal-600/5"
   }
 ];
 
@@ -54,25 +58,31 @@ const CategoriesSection = () => {
           {categories.map((category, index) => (
             <Card 
               key={index} 
-              className="group relative overflow-hidden hover:shadow-xl transition-all duration-500 cursor-pointer border-0 hover:-translate-y-2 bg-white"
+              className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer border-0 hover:-translate-y-3 bg-white backdrop-blur-sm"
             >
+              {/* Background gradient overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              
               <CardContent className="p-8 text-center relative z-10">
-                <div className={`w-20 h-20 ${category.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
+                <div className={`w-20 h-20 ${category.iconBg} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
                   <category.icon className="w-10 h-10" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-education-blue transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                   {category.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                <p className="text-gray-600 mb-6 text-base leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                   {category.description}
                 </p>
                 
-                <div className="text-education-blue font-semibold text-sm tracking-wide">
+                <div className="inline-flex items-center justify-center px-4 py-2 bg-gray-100 group-hover:bg-blue-50 rounded-full text-blue-600 font-semibold text-sm tracking-wide transition-all duration-300 group-hover:scale-105">
                   {category.institutions}
                 </div>
               </CardContent>
+
+              {/* Hover border effect */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" />
             </Card>
           ))}
         </div>
