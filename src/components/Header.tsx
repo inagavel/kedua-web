@@ -22,7 +22,8 @@ const Header = () => {
 
           {/* Navigation - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</a>
+            <a href="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Início</a>
+            <a href="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</a>
             <a href="#categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</a>
             <a href="#sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</a>
             <a href="#contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</a>
@@ -114,7 +115,8 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <nav className="flex flex-col space-y-4">
-              <a href="#instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</a>
+              <a href="/" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Início</a>
+              <a href="/instituicoes" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Instituições</a>
               <a href="#categorias" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Categorias</a>
               <a href="#sobre" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Sobre</a>
               <a href="#contato" className="text-gray-600 hover:text-education-blue transition-colors font-medium">Contato</a>
