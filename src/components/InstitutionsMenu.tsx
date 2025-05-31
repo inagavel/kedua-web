@@ -1,10 +1,10 @@
-
 import { Search, MapPin, Users, Calendar, Star } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const institutions = [
   {
@@ -134,20 +134,24 @@ const InstitutionsMenu = () => {
 
         <div className="container mx-auto px-4 py-8">
           {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start">
-            {filterTabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveFilter(tab.id)}
-                className={`px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                  activeFilter === tab.id
-                    ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-purple-500/50 shadow-xl"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200 hover:border-purple-300"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start items-center">
+            <span className="text-gray-600 font-medium mr-2">Filtrar por:</span>
+            <ToggleGroup 
+              type="single" 
+              value={activeFilter} 
+              onValueChange={(value) => value && setActiveFilter(value)}
+              className="gap-2"
+            >
+              {filterTabs.map((tab) => (
+                <ToggleGroupItem
+                  key={tab.id}
+                  value={tab.id}
+                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-lg data-[state=on]:bg-blue-100 data-[state=on]:text-blue-700 data-[state=on]:border-blue-300 hover:bg-gray-50"
+                >
+                  {tab.label}
+                </ToggleGroupItem>
+              ))}
+            </ToggleGroup>
             
             {/* Additional Options */}
             <div className="flex gap-3 ml-auto">
