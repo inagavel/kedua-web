@@ -73,12 +73,12 @@ const Categories = () => {
         </div>
       </section>
 
-      {/* Categories Grid */}
-      <section className="py-16">
+      {/* Categories Grid with hero gradient background */}
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => (
-              <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0">
+              <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white/95 backdrop-blur-sm">
                 <CardContent className="p-8 text-center">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-8 h-8 text-white" />

@@ -100,9 +100,9 @@ const InstitutionsMenu = () => {
   });
 
   return (
-    <section className="bg-gray-50 min-h-screen">
+    <section className="min-h-screen">
       <div className="w-full">
-        {/* Hero Section - sem margens nem border radius */}
+        {/* Hero Section */}
         <div className="gradient-bg text-white py-20 px-8">
           <div className="container mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
@@ -170,7 +170,7 @@ const InstitutionsMenu = () => {
           {/* Institutions Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredInstitutions.map((institution) => (
-              <Card key={institution.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white border-0">
+              <Card key={institution.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/95 backdrop-blur-sm border-0">
                 <div className="aspect-video relative overflow-hidden">
                   <img 
                     src={institution.image} 

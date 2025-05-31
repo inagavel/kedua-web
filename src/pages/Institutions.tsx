@@ -7,7 +7,9 @@ const Institutions = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <InstitutionsMenu />
+      <div className="min-h-screen hero-gradient">
+        <InstitutionsMenu />
+      </div>
       <Footer />
     </div>
   );
