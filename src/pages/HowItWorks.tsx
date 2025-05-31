@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { UserPlus, Search, GraduationCap, BarChart3, TrendingUp, CheckCircle, Shield, Users, FileText, BookOpen } from "lucide-react";
@@ -170,7 +169,7 @@ const HowItWorks = () => {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -213,7 +212,7 @@ const HowItWorks = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -243,7 +242,7 @@ const HowItWorks = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">

@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Users, Award, Heart } from "lucide-react";
@@ -97,7 +96,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -110,7 +109,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="text-center border-0 hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center border-0 hover:shadow-lg transition-shadow bg-white/95 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
                     <value.icon className="w-8 h-8 text-white" />
