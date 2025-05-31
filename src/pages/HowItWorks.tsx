@@ -101,164 +101,169 @@ const faqs = [
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <div className="min-h-screen">
+      {/* Apply hero gradient background to entire page */}
+      <div className="absolute inset-0 hero-gradient" />
       
-      {/* Hero Section */}
-      <section className="gradient-bg text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Como Funciona
-          </h1>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Do cadastro à matrícula, a Kedua torna todo o processo simples e transparente, economizando seu tempo e garantindo a melhor escolha.
-          </p>
-        </div>
-      </section>
-
-      {/* Steps Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-blue-600">Processo Simples em </span>
-              <span className="text-green-600">6 Passos</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <div className="relative z-10">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Como Funciona
+            </h1>
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Do cadastro à matrícula, a Kedua torna todo o processo simples e transparente, economizando seu tempo e garantindo a melhor escolha.
             </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <Card key={step.id} className="group relative text-left border-0 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white overflow-hidden">
-                {/* Background gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                
-                <CardContent className="p-8 relative z-10">
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${step.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
-                      <step.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-2 mb-4">
-                        <span className="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Passo {step.id}</span>
+        {/* Steps Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <span className="text-blue-600">Processo Simples em </span>
+                <span className="text-green-600">6 Passos</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Do cadastro à matrícula, a Kedua torna todo o processo simples e transparente, economizando seu tempo e garantindo a melhor escolha.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {steps.map((step, index) => (
+                <Card key={step.id} className="group relative text-left border-0 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/95 backdrop-blur-sm overflow-hidden">
+                  {/* Background gradient overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                  
+                  <CardContent className="p-8 relative z-10">
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${step.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                        <step.icon className="w-7 h-7 text-white" />
                       </div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                        {step.description}
-                      </p>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-4">
+                          <span className="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Passo {step.id}</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
+                  </CardContent>
 
-                {/* Hover border effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
-              Iniciar Minha Busca
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-blue-600">Por Que Escolher a </span>
-              <span className="text-green-600">Kedua</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Nossa plataforma foi desenvolvida pensando em oferecer a melhor experiência possível para estudantes em busca de formação.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="group border-0 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white overflow-hidden">
-                {/* Background gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                
-                <CardContent className="p-8 relative z-10">
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${benefit.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
-                      <benefit.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">
-                        {benefit.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-
-                {/* Hover border effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-blue-600">Perguntas </span>
-              <span className="text-green-600">Frequentes</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Encontre respostas para as dúvidas mais comuns sobre o funcionamento da Kedua.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <span className="text-blue-600 font-semibold">{faq.question}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-4">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
+                </Card>
               ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Pronto para Começar?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Junte-se a milhares de estudantes que já encontraram sua instituição ideal através da Kedua.
-            </p>
-            <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
-              Buscar Instituições
-            </button>
+            <div className="text-center mt-12">
+              <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                Iniciar Minha Busca
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
+        {/* Why Choose Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <span className="text-blue-600">Por Que Escolher a </span>
+                <span className="text-green-600">Kedua</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Nossa plataforma foi desenvolvida pensando em oferecer a melhor experiência possível para estudantes em busca de formação.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {benefits.map((benefit, index) => (
+                <Card key={index} className="group border-0 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/95 backdrop-blur-sm overflow-hidden">
+                  {/* Background gradient overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                  
+                  <CardContent className="p-8 relative z-10">
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${benefit.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                        <benefit.icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                          {benefit.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" />
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <span className="text-blue-600">Perguntas </span>
+                <span className="text-green-600">Frequentes</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Encontre respostas para as dúvidas mais comuns sobre o funcionamento da Kedua.
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border border-white/20 bg-white/95 backdrop-blur-sm rounded-lg px-6">
+                    <AccordionTrigger className="text-left hover:no-underline">
+                      <span className="text-blue-600 font-semibold">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600 pb-4">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Pronto para Começar?
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Junte-se a milhares de estudantes que já encontraram sua instituição ideal através da Kedua.
+              </p>
+              <button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                Buscar Instituições
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
     </div>
   );
 };
